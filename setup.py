@@ -1,9 +1,15 @@
 from setuptools import setup
 
+try:
+    long_description = open('README.md', 'rb').read().decode('utf-8')
+except:
+    long_description = 'python registry package',
+
 setup(
     name='py_configs_registry',
     version='0.0.1',
     description='python registry package',
+    long_description=long_description,
     py_modules=["registry"],
 
     url='http://github.com/ztj1993/py_configs_registry',
