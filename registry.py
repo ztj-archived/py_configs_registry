@@ -9,8 +9,11 @@ from mergedict import MergeDict
 class Registry(object):
     """ 配置模块"""
 
-    def __init__(self):
-        self.options = {}
+    def __init__(self, options=None):
+        if type(options) is dict:
+            self.options = options
+        else:
+            self.options = {}
         self.hooks = {}
 
     def set(self, key, value):

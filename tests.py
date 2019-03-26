@@ -8,6 +8,11 @@ from registry import Registry
 
 class TestRegistry(unittest.TestCase):
 
+    def test_init(self):
+        registry = Registry({'a': {'aa': 'aaa'}})
+        self.assertEqual(registry.get(), {'a': {'aa': 'aaa'}})
+        self.assertEqual(registry.get('a.aa'), 'aaa')
+
     def test_set(self):
         registry = Registry()
         registry.set('a', 'a')
