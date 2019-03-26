@@ -1,7 +1,7 @@
 from setuptools import setup
 
 try:
-    long_description = open('README.md', 'rb').read().decode('utf-8')
+    long_description = open('README.md', encoding='utf8').read()
 except:
     long_description = 'python registry package',
 
